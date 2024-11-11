@@ -1,30 +1,22 @@
-const sidebars = {
-  "docSiderbar": [
+module.exports = {
+  "api": [
     {
       "type": "category",
-      "label": "Types",
+      "label": "Class",
       "items": [
         "api/Provider",
         "api/ExecutionArgs",
+        "api/AggregateOpSchemaResolver",
         "api/AggregateOpTemplateContext",
         "api/AggregateOpTemplateContextFindOne",
+        "api/AggregateSchemaResolver",
         "api/AggregateTemplateContextAction",
         "api/AggregateTemplateContext",
+        "api/ConditionSchemaResolver",
         "api/ConditionTemplateContext",
         "api/ConditionTemplateContextVariable",
         "api/ConditionTemplateContextNot"
       ]
-    },
-    {
-      "type": "category",
-      "label": "Resolvers",
-      "items": [
-        "api/AggregateOpSchemaResolver",
-        "api/AggregateSchemaResolver",
-        "api/ConditionSchemaResolver",
-      ]
     }
   ]
 };
-
-export default sidebars;
