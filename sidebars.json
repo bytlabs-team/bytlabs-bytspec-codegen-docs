@@ -1,0 +1,217 @@
+{
+  "docSiderbar": [
+    {
+      "type": "category",
+      "label": "Resolvers",
+      "items": [
+        {
+          "type": "category",
+          "label": "Schema",
+          "items": [
+            {
+              "type": "category",
+              "label": "AggregateAction",
+              "items": [
+                "api/AggregateActionSchemaResolver"
+              ]
+            },
+            {
+              "type": "category",
+              "label": "AggregateOp",
+              "items": [
+                "api/AggregateOpSchemaResolver",
+                {
+                  "type": "category",
+                  "label": "Contexts",
+                  "items": [
+                    "api/AggregateOpTemplateContext",
+                    "api/AggregateOpTemplateContextFindOne"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "Aggregate",
+              "items": [
+                "api/AggregateSchemaResolver",
+                {
+                  "type": "category",
+                  "label": "Contexts",
+                  "items": [
+                    "api/AggregateTemplateContext",
+                    "api/AggregateTemplateContextAction"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "Condition",
+              "items": [
+                "api/ConditionSchemaResolver",
+                {
+                  "type": "category",
+                  "label": "Contexts",
+                  "items": [
+                    "api/ConditionTemplateContext",
+                    "api/ConditionTemplateContextNot",
+                    "api/ConditionTemplateContextVariable"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "Find",
+              "items": [
+                "api/FindSchemaResolver",
+                {
+                  "type": "category",
+                  "label": "Contexts",
+                  "items": [
+                    "api/FindTemplateContext"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "If",
+              "items": [
+                "api/IfSchemaResolver",
+                {
+                  "type": "category",
+                  "label": "Contexts",
+                  "items": [
+                    "api/IfTemplateContext"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "Invoke",
+              "items": [
+                "api/InvokeSchemaResolver"
+              ]
+            },
+            {
+              "type": "category",
+              "label": "Let",
+              "items": [
+                "api/LetSchemaResolver",
+                {
+                  "type": "category",
+                  "label": "Contexts",
+                  "items": [
+                    "api/LetTemplateContext"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "MapFields",
+              "items": [
+                "api/MapFieldsSchemaResolver",
+                {
+                  "type": "category",
+                  "label": "Contexts",
+                  "items": [
+                    "api/MapFieldsTemplateContext"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "Match",
+              "items": [
+                "api/MatchSchemaResolver"
+              ]
+            },
+            {
+              "type": "category",
+              "label": "Method",
+              "items": [
+                "api/MethodSchemaResolver"
+              ]
+            },
+            {
+              "type": "category",
+              "label": "Op",
+              "items": [
+                "api/OpSchemaResolver",
+                {
+                  "type": "category",
+                  "label": "Contexts",
+                  "items": [
+                    "api/AggregateOpTemplateContext",
+                    "api/AggregateOpTemplateContextFindOne"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "Property",
+              "items": [
+                "api/PropertySchemaResolver"
+              ]
+            },
+            {
+              "type": "category",
+              "label": "Push",
+              "items": [
+                "api/PushSchemaResolver",
+                {
+                  "type": "category",
+                  "label": "Contexts",
+                  "items": [
+                    "api/PushTemplateContext"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "TypeDefault",
+              "items": [
+                "api/TypeDefaultSchemaResolver"
+              ]
+            },
+            {
+              "type": "category",
+              "label": "Type",
+              "items": [
+                "api/TypeSchemaResolver"
+              ]
+            },
+            {
+              "type": "category",
+              "label": "Unless",
+              "items": [
+                "api/UnlessSchemaResolver",
+                {
+                  "type": "category",
+                  "label": "Contexts",
+                  "items": [
+                    "api/UnlessTemplateContext"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "Variable",
+              "items": [
+                "api/VariableSchemaResolver"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
