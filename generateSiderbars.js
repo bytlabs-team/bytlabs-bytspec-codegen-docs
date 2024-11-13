@@ -62,7 +62,10 @@ async function generateSideBarPreset() {
     const resolvers = await generateResolversSideBar();
     console.log(resolvers)
     return ({
-        docSiderbar: [resolvers]
+        apiSiderbar: [resolvers],
+        docSiderbar: [
+            "getting-started/intro"
+        ]
     })
 }
 

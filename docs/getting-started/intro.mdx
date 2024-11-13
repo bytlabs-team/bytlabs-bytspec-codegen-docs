@@ -1,0 +1,19 @@
+---
+---
+
+# BytSpec: Introduction
+
+**BytSpec** is a tool for generating code from structured specifications based on Domain-Driven Design (DDD) principles. BytSpec uses a simple JSON file to define the core elements of an application: **bounded contexts**, **domains**, and **commands**. This approach helps developers focus on high-level design while automating repetitive coding tasks.
+
+## How It Works
+
+1. **Define Your System in JSON**: Use BytSpec's JSON specification to set up:
+   - **Bounded Contexts**: Separate areas of your application, each representing a distinct business function.
+   - **Domains**: Specific business entities and processes within each context.
+   - **Commands**: Actions that trigger changes in the system, like user requests or events.
+
+2. **Generate Code Automatically**: Once the JSON spec is complete, BytSpec’s code generator:
+   - Builds project structures for each context and domain.
+   - Creates basic code for command handlers, ready for your business logic.
+
+BytSpec helps streamline development by providing a clear structure, from design to code, making it easier to maintain and scale applications.

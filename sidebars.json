@@ -1,5 +1,5 @@
 {
-  "docSiderbar": [
+  "apiSiderbar": [
     {
       "type": "category",
       "label": "Resolvers",
@@ -213,5 +213,8 @@
         }
       ]
     }
+  ],
+  "docSiderbar": [
+    "getting-started/intro"
   ]
 }
