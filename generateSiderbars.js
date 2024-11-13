@@ -20,49 +20,61 @@ async function getFilesByRegex(directoryPath, regexPattern) {
     }
 }
 
-async function generateResolversSideBar() {
-    const files = await getFilesByRegex("./docs/api", /.*SchemaResolver.mdx/);
+async function generateSchemaResolversSideBar() {
+    const schemaResolvers = await getFilesByRegex("./docs/api", /.*SchemaResolver.mdx/);
+
     return {
         "type": "category",
-        "label": "Resolvers",
-        "items": [
-            {
-                "type": "category",
-                "label": "Schema",
-                "items": await Promise.all(files.map(async resolverName => {
-                    const resolverNameFlushed = resolverName
-                        .replace("SchemaResolver", "")
-                        .replace(".mdx", "");
-                    const templateContexts = (await getFilesByRegex("./docs/api", new RegExp(`${resolverNameFlushed}TemplateContext[a-zA-Z]*.mdx`))) || [];
-                    const items = [
-                        `api/${resolverName.replace(".mdx", "")}`,
+        "label": "Schema Resolvers",
+        "items": await Promise.all(schemaResolvers.map(async resolverName => {
+            return `api/${resolverName.replace(".mdx", "")}`
 
-                    ]
 
-                    if (templateContexts.some(_ => true)) {
-                        items.push({
-                            type: "category",
-                            label: "Contexts",
-                            items: templateContexts.map(fileName => `api/${fileName.replace(".mdx", "")}`)
-                        });
-                    }
-
-                    return {
-                        "type": "category",
-                        "label": resolverNameFlushed,
-                        "items": items
-                    }
-                }))
-            }
-        ]
+        }))
     }
 }
 
+async function generateTemplateContextsSideBar() {
+    const schemaResolvers = await getFilesByRegex("./docs/api", /.*TemplateContext.*.mdx/);
+
+    return {
+        "type": "category",
+        "label": "Template Contexts",
+        "items": await Promise.all(schemaResolvers.map(async resolverName => {          
+            return `api/${resolverName.replace(".mdx", "")}`
+        }))
+    }
+}
+
+async function generateExecutionArgsSideBar() {
+    const schemaResolvers = await getFilesByRegex("./docs/api", /.*ExecutionArgs.*.mdx/);
+
+    return {
+        "type": "category",
+        "label": "Execution Args",
+        "items": await Promise.all(schemaResolvers.map(async resolverName => {
+            return `api/${resolverName.replace(".mdx", "")}`
+        }))
+    }
+}
+
+async function generateSchemaObjectsSideBar() {
+    const schemas = await getFilesByRegex("./docs/api", /.*Schema.mdx/);
+    return ({
+        "type": "category",
+        "label": "Schema Objects",
+        "items": await Promise.all(schemas.map(async resolverName => `api/${resolverName.replace(".mdx", "")}`))
+    })
+}
+
 async function generateSideBarPreset() {
-    const resolvers = await generateResolversSideBar();
+    const resolvers = await generateSchemaResolversSideBar();
+    const schemaObjects = await generateSchemaObjectsSideBar();
+    const templateContexts = await generateTemplateContextsSideBar();
+    const executionArgs = await generateExecutionArgsSideBar();
     console.log(resolvers)
     return ({
-        apiSiderbar: [resolvers],
+        apiSiderbar: [schemaObjects, resolvers, executionArgs, templateContexts],
         docSiderbar: [
             "getting-started/intro"
         ]
